@@ -100,21 +100,21 @@ const EmpoweringOrphans = () => {
           Every orphan deserves a chance to shine. We provide the tools—nutrition, healthcare, and education—to help them soar.
         </p>
         <div className="space-y-12 max-w-3xl">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Nourishing Futures</h3>
-            <p className="text-gray-600 leading-relaxed">
+          <div className="bg-blue-600 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-2xl font-semibold text-white mb-4">Nourishing Futures</h3>
+            <p className="text-white leading-relaxed">
               Hunger shouldn’t dim a child’s potential. Our programs deliver daily nutritious meals to orphans, fueling their growth and dreams through sustainable partnerships with local communities.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Healing with Care</h3>
-            <p className="text-gray-600 leading-relaxed">
+          <div className="bg-blue-600 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-2xl font-semibold text-white mb-4">Healing with Care</h3>
+            <p className="text-white leading-relaxed">
               Health is hope. We ensure orphans receive check-ups, vaccinations, and critical treatments, partnering with clinics to provide life-changing medical care.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Unlocking Knowledge</h3>
-            <p className="text-gray-600 leading-relaxed">
+          <div className="bg-blue-600 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h3 className="text-2xl font-semibold text-white mb-4">Unlocking Knowledge</h3>
+            <p className="text-white leading-relaxed">
               Education breaks barriers. We fund tuition, supply materials, and offer scholarships, empowering orphans to learn, grow, and shape their own futures.
             </p>
           </div>
@@ -130,20 +130,20 @@ const OurWork = () => {
       <div className="container mx-auto flex flex-col items-center text-center px-4">
         <h2 className="text-4xl font-bold text-gray-800 mb-8">Where We Make a Difference</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl">
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Reach</h3>
-            <p className="text-gray-600 mb-4">We uplift orphans in:</p>
-            <ul className="list-none text-gray-600 mx-auto max-w-md space-y-2">
-              <li>Guinea-Bissau</li>
-              <li>Senegal</li>
-              <li>Gambia</li>
-              <li>Kenya</li>
-              <li>Ghana</li>
+          <div className="bg-blue-600 p-6 rounded-lg shadow-md">
+            <h3 className="text-2xl font-semibold text-white mb-4">Our Reach</h3>
+            <p className="text-white mb-4">We uplift orphans in:</p>
+            <ul className="list-none text-white mx-auto max-w-md space-y-2">
+              <li>🇬🇼 Guinea-Bissau</li>
+              <li>🇸🇳 Senegal</li>
+              <li>🇬🇲 Gambia</li>
+              <li>🇰🇪 Kenya</li>
+              <li>🇬🇭 Ghana</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Impact</h3>
-            <ul className="list-none text-gray-600 mx-auto max-w-md space-y-2">
+          <div className="bg-blue-600 p-6 rounded-lg shadow-md">
+            <h3 className="text-2xl font-semibold text-white mb-4">Our Impact</h3>
+            <ul className="list-none text-white mx-auto max-w-md space-y-2">
               <li><strong>Nutrition</strong> – Daily meals to end hunger.</li>
               <li><strong>Education</strong> – Fees and supplies for learning.</li>
               <li><strong>Shelter</strong> – Clothing and safe housing.</li>
@@ -273,13 +273,13 @@ const Footer = () => {
     <footer className="bg-blue-900 text-white py-8">
       <div className="container mx-auto flex flex-col items-center text-center px-4">
         <p className="text-lg">Copyright © 2025 Ashmay Foundation. All rights reserved.</p>
-        <p className="text-sm mt-2">Registered Charity No: [Your Charity Number]</p>
+        <p className="text-sm mt-2">Registered Charity No: +44 7926 577057 </p>
         <div className="flex justify-center gap-6 mt-4">
           <a href="#Privacy" className="hover:text-yellow-300 transition-colors duration-300">
-            Privacy Policy
+            |Privacy Policy|
           </a>
           <a href="#Terms" className="hover:text-yellow-300 transition-colors duration-300">
-            Terms & Conditions
+            |Terms & Conditions|
           </a>
         </div>
       </div>
