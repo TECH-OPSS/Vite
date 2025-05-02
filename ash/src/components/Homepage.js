@@ -1,12 +1,13 @@
 import React from 'react';
+import logo from '../assets/logoo.png';
 
 const NavBar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-4 sticky top-0 z-20 shadow-lg">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-3xl font-extrabold text-center mb-4 md:mb-0 tracking-tight">Ashmay Foundation</div>
+        <div className="text-3xl font-extrabold text-center mb-4 md:mb-0 tracking-tight"><img src={logo} alt="logoo" width="50" height="25" /></div>
         <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-8">
-          {['Home', 'About', 'Impact', 'Work', 'Join Us', 'Contact'].map((item, index) => (
+          {['Home', 'About', 'Impact', 'Work', 'Projects', 'Join Us', 'Contact'].map((item, index) => (
             <a
               key={index}
               href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -96,7 +97,7 @@ const EmpoweringOrphans = () => {
     <section id="impact" className="py-24 bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="container mx-auto flex flex-col items-center text-center px-4">
         <h2 className="text-4xl font-bold text-gray-800 mb-8">Empowering Dreams</h2>
-        <p className="text-xl text-gray-600 mb-12 max-w-3xl">
+        <p className="text-xl text_gray-600 mb-12 max-w-3xl">
           Every orphan deserves a chance to shine. We provide the tools—nutrition, healthcare, and education—to help them soar.
         </p>
         <div className="space-y-12 max-w-3xl">
@@ -150,6 +151,68 @@ const OurWork = () => {
               <li><strong>Healthcare</strong> – Access to essential care.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const OurProjects = () => {
+  const projects = [
+    {
+      title: "Guinea-Bissau Nutrition Program",
+      description: "Providing daily nutritious meals to over 500 orphans, ensuring healthy growth and development through local partnerships.",
+      image: "https://via.placeholder.com/600x400?text=Nutrition+Program"
+    },
+    {
+      title: "Senegal Education Initiative",
+      description: "Funding tuition and supplies for 300 orphans, empowering them with access to quality education and scholarships.",
+      image: "https://via.placeholder.com/600x400?text=Education+Initiative"
+    },
+    {
+      title: "Kenya Healthcare Outreach",
+      description: "Delivering medical check-ups and vaccinations to 400 children, partnering with clinics for life-saving care.",
+      image: "https://via.placeholder.com/600x400?text=Healthcare+Outreach"
+    },
+    {
+      title: "Ghana Safe Housing Project",
+      description: "Building safe homes and providing clothing for 200 orphans, creating secure environments for growth.",
+      image: "https://via.placeholder.com/600x400?text=Safe+Housing"
+    },
+    {
+      title: "Guinea-Bissau Nutrition Program",
+      description: "Providing daily nutritious meals to over 500 orphans, ensuring healthy growth and development through local partnerships.",
+      image: "https://via.placeholder.com/600x400?text=Nutrition+Program"
+    },
+    {
+      title: "Guinea-Bissau Nutrition Program",
+      description: "Providing daily nutritious meals to over 500 orphans, ensuring healthy growth and development through local partnerships.",
+      image: "https://via.placeholder.com/600x400?text=Nutrition+Program"
+    },
+  ];
+
+  return (
+    <section id="projects" className="py-24 bg-gradient-to-b from-gray-100 to-white">
+      <div className="container mx-auto flex flex-col items-center text-center px-4">
+        <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Projects</h2>
+        <p className="text-xl text-gray-600 mb-12 max-w-3xl">
+          Discover the transformative projects we undertake to uplift orphans across Africa, bringing hope and opportunity to their lives.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
+              <p className="text-gray-600 leading-relaxed flex-grow">{project.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -273,13 +336,13 @@ const Footer = () => {
     <footer className="bg-blue-900 text-white py-8">
       <div className="container mx-auto flex flex-col items-center text-center px-4">
         <p className="text-lg">Copyright © 2025 Ashmay Foundation. All rights reserved.</p>
-        <p className="text-sm mt-2">Registered Charity No: +44 7926 577057 </p>
+        <p className="text-sm mt-2">Registered Charity No: +44 7926 577057</p>
         <div className="flex justify-center gap-6 mt-4">
           <a href="#Privacy" className="hover:text-yellow-300 transition-colors duration-300">
-            |Privacy Policy|
+            Privacy Policy
           </a>
           <a href="#Terms" className="hover:text-yellow-300 transition-colors duration-300">
-            |Terms & Conditions|
+            Terms & Conditions
           </a>
         </div>
       </div>
@@ -295,6 +358,7 @@ const App = () => {
       <AboutUs />
       <EmpoweringOrphans />
       <OurWork />
+      <OurProjects />
       <GetInvolved />
       <Leadership />
       <ContactUs />
