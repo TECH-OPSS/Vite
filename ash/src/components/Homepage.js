@@ -215,18 +215,18 @@ const OurWork = () => {
 const OurProjects = () => {
   const projects = [
     {
-      title: "Guinea-Bissau Nutrition Program",
-      description: "Providing daily nutritious meals to over 500 orphans, ensuring healthy growth and development through local partnerships.",
+      title: "Nutrition Program",
+      description: "Providing nutritious meals to orphans, ensuring healthy growth and development through local partnerships.",
       image: "images/Project one four.jpg"
     },
     {
-      title: "Senegal Education Initiative",
-      description: "Funding tuition and supplies for 300 orphans, empowering them with access to quality education and scholarships.",
+      title: "Food Donation Program",
+      description: "Offering food supplies to orphans, empowering them with access to quality health.",
       image: "images/Project one two.jpg"
     },
     {
-      title: "Kenya Healthcare Outreach",
-      description: "Delivering medical check-ups and vaccinations to 400 children, partnering with clinics for life-saving care.",
+      title: "Outreach Program",
+      description: "Delivering food to children, partnering with orphanages to save lives through food.",
       image: "images/St mathews 2.jpg"
     },
   ];
