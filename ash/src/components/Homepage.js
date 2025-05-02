@@ -1,12 +1,43 @@
-import React from 'react';
-// import logo from '../assets/logoo.png';
+import React, { useState } from 'react';
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-4 sticky top-0 z-20 shadow-lg">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-3xl font-extrabold text-center mb-4 md:mb-0 tracking-tight"><img src="/images/logoo.png" alt="Ashamay Foundation logo" width="50" height="60"/></div>
-        <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-8">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-3
+
+xl font-extrabold tracking-tight">
+          <img src="/images/logoo.png" alt="Ashamay Foundation logo" width="50" height="60" />
+        </div>
+        {/* Hamburger Icon */}
+        <button
+          className="md:hidden focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+            />
+          </svg>
+        </button>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-8">
           {['Home', 'About', 'Impact', 'Work', 'Projects', 'Join Us', 'Contact'].map((item, index) => (
             <a
               key={index}
@@ -19,6 +50,30 @@ const NavBar = () => {
           <a
             href="#donate"
             className="bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition-colors duration-300"
+          >
+            Donate Now
+          </a>
+        </div>
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden absolute top-16 left-0 right-0 bg-blue-900 text-white flex flex-col items-center space-y-4 py-6 transition-all duration-300 ease-in-out ${
+            isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
+        >
+          {['Home', 'About', 'Impact', 'Work', 'Projects', 'Join Us', 'Contact'].map((item, index) => (
+            <a
+              key={index}
+              href={`#${item.toLowerCase().replace(' ', '-')}`}
+              className="text-lg hover:text-yellow-300 transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              {item}
+            </a>
+          ))}
+          <a
+            href="#donate"
+            className="bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition-colors duration-300"
+            onClick={() => setIsOpen(false)}
           >
             Donate Now
           </a>
@@ -97,7 +152,7 @@ const EmpoweringOrphans = () => {
     <section id="impact" className="py-24 bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="container mx-auto flex flex-col items-center text-center px-4">
         <h2 className="text-4xl font-bold text-gray-800 mb-8">Empowering Dreams</h2>
-        <p className="text-xl text_gray-600 mb-12 max-w-3xl">
+        <p className="text-xl text-gray-600 mb-12 max-w-3xl">
           Every orphan deserves a chance to shine. We provide the tools—nutrition, healthcare, and education—to help them soar.
         </p>
         <div className="space-y-12 max-w-3xl">
@@ -135,11 +190,11 @@ const OurWork = () => {
             <h3 className="text-2xl font-semibold text-white mb-4">Our Reach</h3>
             <p className="text-white mb-4">We uplift orphans in:</p>
             <ul className="list-none text-white mx-auto max-w-md space-y-4">
-              <li className='flex items-center justify-start gap-4'><img src="/images/guinee.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇬🇼 Guinea-Bissau</p></li>
-              <li className='flex items-center justify-start gap-4'><img src="/images/senegal.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇸🇳 Senegal</p></li>
-              <li className='flex items-center justify-start gap-4'><img src="/images/gambia.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇬🇲 Gambia</p></li>
-              <li className='flex items-center justify-start gap-4'><img src="/images/kenya.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇰🇪 Kenya</p></li>
-              <li className='flex items-center justify-start gap-4'><img src="/images/ghana.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇬🇭 Ghana</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/guinee.jpg" alt="Guinea-Bissau flag" width="30" height="40"/><p>🇬🇼 Guinea-Bissau</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/senegal.jpg" alt="Senegal flag" width="30" height="40"/><p>🇸🇳 Senegal</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/gambia.jpg" alt="Gambia flag" width="30" height="40"/><p>🇬🇲 Gambia</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/kenya.jpg" alt="Kenya flag" width="30" height="40"/><p>🇰🇪 Kenya</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/ghana.jpg" alt="Ghana flag" width="30" height="40"/><p>🇬🇭 Ghana</p></li>
             </ul>
           </div>
           <div className="bg-blue-600 p-6 rounded-lg shadow-md">
@@ -258,7 +313,7 @@ const Leadership = () => {
         <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Visionary Leader</h2>
         <div className="flex flex-col items-center max-w-3xl">
           <div className="overflow-hidden w-64 h-64 bg-gray-300 rounded-full mb-6 flex items-center justify-center text-gray-600 shadow-lg">
-            <img src="/images/CEO.jpeg" alt="Fatumata Djalo's Picture"/>
+            <img src="/images/CEO.jpeg" alt="Fatumata Djalo's Picture" />
           </div>
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">Fatumata Djalo – Founder & Director</h3>
           <p className="text-gray-600 leading-relaxed">
