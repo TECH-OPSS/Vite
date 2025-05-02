@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from '../assets/logoo.png';
+// import logo from '../assets/logoo.png';
 
 const NavBar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-4 sticky top-0 z-20 shadow-lg">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-3xl font-extrabold text-center mb-4 md:mb-0 tracking-tight"><img src={logo} alt="logoo" width="50" height="25" /></div>
+        <div className="text-3xl font-extrabold text-center mb-4 md:mb-0 tracking-tight"><img src="/images/logoo.png" alt="Ashamay Foundation logo" width="50" height="60"/></div>
         <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-8">
           {['Home', 'About', 'Impact', 'Work', 'Projects', 'Join Us', 'Contact'].map((item, index) => (
             <a
@@ -134,17 +134,17 @@ const OurWork = () => {
           <div className="bg-blue-600 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold text-white mb-4">Our Reach</h3>
             <p className="text-white mb-4">We uplift orphans in:</p>
-            <ul className="list-none text-white mx-auto max-w-md space-y-2">
-              <li>🇬🇼 Guinea-Bissau</li>
-              <li>🇸🇳 Senegal</li>
-              <li>🇬🇲 Gambia</li>
-              <li>🇰🇪 Kenya</li>
-              <li>🇬🇭 Ghana</li>
+            <ul className="list-none text-white mx-auto max-w-md space-y-4">
+              <li className='flex items-center justify-start gap-4'><img src="/images/guinee.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇬🇼 Guinea-Bissau</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/senegal.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇸🇳 Senegal</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/gambia.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇬🇲 Gambia</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/kenya.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇰🇪 Kenya</p></li>
+              <li className='flex items-center justify-start gap-4'><img src="/images/ghana.jpg" alt="Ashamay Foundation logo" width="30" height="40"/><p>🇬🇭 Ghana</p></li>
             </ul>
           </div>
           <div className="bg-blue-600 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold text-white mb-4">Our Impact</h3>
-            <ul className="list-none text-white mx-auto max-w-md space-y-2">
+            <ul className="flex items-start flex-col list-none text-white mx-auto max-w-md space-y-2">
               <li><strong>Nutrition</strong> – Daily meals to end hunger.</li>
               <li><strong>Education</strong> – Fees and supplies for learning.</li>
               <li><strong>Shelter</strong> – Clothing and safe housing.</li>
@@ -162,32 +162,17 @@ const OurProjects = () => {
     {
       title: "Guinea-Bissau Nutrition Program",
       description: "Providing daily nutritious meals to over 500 orphans, ensuring healthy growth and development through local partnerships.",
-      image: "https://via.placeholder.com/600x400?text=Nutrition+Program"
+      image: "images/Project one four.jpg"
     },
     {
       title: "Senegal Education Initiative",
       description: "Funding tuition and supplies for 300 orphans, empowering them with access to quality education and scholarships.",
-      image: "https://via.placeholder.com/600x400?text=Education+Initiative"
+      image: "images/Project one two.jpg"
     },
     {
       title: "Kenya Healthcare Outreach",
       description: "Delivering medical check-ups and vaccinations to 400 children, partnering with clinics for life-saving care.",
-      image: "https://via.placeholder.com/600x400?text=Healthcare+Outreach"
-    },
-    {
-      title: "Ghana Safe Housing Project",
-      description: "Building safe homes and providing clothing for 200 orphans, creating secure environments for growth.",
-      image: "https://via.placeholder.com/600x400?text=Safe+Housing"
-    },
-    {
-      title: "Guinea-Bissau Nutrition Program",
-      description: "Providing daily nutritious meals to over 500 orphans, ensuring healthy growth and development through local partnerships.",
-      image: "https://via.placeholder.com/600x400?text=Nutrition+Program"
-    },
-    {
-      title: "Guinea-Bissau Nutrition Program",
-      description: "Providing daily nutritious meals to over 500 orphans, ensuring healthy growth and development through local partnerships.",
-      image: "https://via.placeholder.com/600x400?text=Nutrition+Program"
+      image: "images/St mathews 2.jpg"
     },
   ];
 
@@ -272,8 +257,8 @@ const Leadership = () => {
       <div className="container mx-auto flex flex-col items-center text-center px-4">
         <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Visionary Leader</h2>
         <div className="flex flex-col items-center max-w-3xl">
-          <div className="w-64 h-64 bg-gray-300 rounded-full mb-6 flex items-center justify-center text-gray-600 shadow-lg">
-            [Fatumata Djalo's Picture]
+          <div className="overflow-hidden w-64 h-64 bg-gray-300 rounded-full mb-6 flex items-center justify-center text-gray-600 shadow-lg">
+            <img src="/images/CEO.jpeg" alt="Fatumata Djalo's Picture"/>
           </div>
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">Fatumata Djalo – Founder & Director</h3>
           <p className="text-gray-600 leading-relaxed">
